@@ -16,6 +16,33 @@ app.listen(8000,async()=>{
     }
 })
 
+app.get("/",async(req,res)=>{
+    try{
+        file.readFile(_dirname+"/assets/users.html","utf8",function(error,text){
+            if(error){
+                return res.send(error)
+            }
+            return res.send(text);
+        })
+    }
+    catch(error){
+        return res.send(error)
+    }
+})
+
+
+app.get("/users",async(req,res)=>{
+    try{
+        file.readFile(_dirname+"/assets/user.json",function(error,text){
+            if(error){
+                return res.send(error)
+            }
+            return res.send(text);
+        })
+    }catch(error){
+        return res.send(error)
+    }
+})
 
 
 // Note: Do not remove this export statement
