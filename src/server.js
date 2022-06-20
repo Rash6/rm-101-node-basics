@@ -17,11 +17,11 @@ app.listen(8000,async()=>{
 
 app.get("/",async(req,res)=>{
     try{
-        file.readFile(_dirname+"/assets/users.html","utf8",function(error,text){
+        file.readFile(_dirname+"/assets/users.html","utf8",function(error,message){
             if(error){
                 return res.send(error)
             }
-            return res.send(text);
+            return res.send(message);
         })
     }
     catch(error){
@@ -32,11 +32,11 @@ app.get("/",async(req,res)=>{
 
 app.get("/users",async(req,res)=>{
     try{
-        file.readFile(_dirname+"/assets/user.json",function(error,text){
+        file.readFile(_dirname+"/assets/user.json",function(error,message){
             if(error){
                 return res.send(error)
             }
-            return res.send(text);
+            return res.send(message);
         })
     }catch(error){
         return res.send(error)
