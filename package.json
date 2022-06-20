@@ -10,7 +10,8 @@
     "test": "jest --watchAll=false --bail --runInBand --forceExit"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
   },
   "devDependencies": {
     "jest": "^28.1.1",
