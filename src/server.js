@@ -3,8 +3,7 @@ const express = require("express")
 let app = express();
 app.use(express.json())
 var file=require("fs");
-const filejson="./assets/user.json";
-const file_json=require(filejson)
+
 
 
 // Code here
