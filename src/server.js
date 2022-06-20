@@ -17,7 +17,7 @@ app.listen(8000,async()=>{
 
 app.get("/",async(req,res)=>{
     try{
-        file.readFile(_dirname+"./assets/users.html","utf8",function(error,message){
+        file.readFile(__dirname+"/assets/users.html","utf8",function(error,message){
             if(error){
                 return res.send(error)
             }
@@ -32,7 +32,7 @@ app.get("/",async(req,res)=>{
 
 app.get("/users",async(req,res)=>{
     try{
-        file.readFile(_dirname+"./assets/user.json",function(error,message){
+        file.readFile(__dirname+"/assets/user.json",function(error,message){
             if(error){
                 return res.send(error)
             }
